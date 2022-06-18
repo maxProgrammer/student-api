@@ -3,7 +3,9 @@ package com.maxprogrammer.alunoapi.controller;
 import com.maxprogrammer.alunoapi.dtos.AlunoDto;
 import com.maxprogrammer.alunoapi.models.AlunoModel;
 import com.maxprogrammer.alunoapi.services.CrudAlunoService;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,6 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@OpenAPIDefinition(info = @Info(title = "Student REST API", version = "1.0", description = "REST API responsible to make a CRUD of Students."))
 public class CrudAlunosController {
 
     @Autowired
